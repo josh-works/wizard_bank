@@ -28,5 +28,4 @@ class BankTest < Minitest::Test
     assert_equal customer_balance, 600
   end
 
-
 end

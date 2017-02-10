@@ -4,11 +4,11 @@ class Bank
 
   def initialize(name = "wizard bank")
     @name = name
-    @accounts = Hash.new{|key, value| key[value] = {} }
+    @accounts = Hash.new { |hash, key| hash[key] }
   end
 
-  def open_account(account_holder, balance = 0)
-    accounts[account_holder] = balance
+  def open_account(account_holder)
+    accounts[account_holder, account_holder.balance]
   end
 
 end
